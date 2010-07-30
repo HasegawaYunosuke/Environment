@@ -1,0 +1,46 @@
+#################################################
+# オプション
+#################################################
+# 画面の一番下の行を反転させてハードステータス表示
+# hardstatus alwayslastline "%{= gk}[%m/%d %02c:%s] %{gW} %-w%{= wk}%n %t%{-}%+w %=%{gk}$USER@$HOSTNAME[$LANG] (%l) "
+# 背景色消去
+# defbce "on"
+
+# コマンド文字の設定
+escape ^Kk
+
+# 下のスクリーンタブ的な表示のやつ
+# captionはscreen固有の、画面分割の際に現表示画面が何であるかを示すための機能
+caption always "%{= wb} %-w%{=bu dr}%n %t%{-}%+w %= %{=b wk} [%l] %{=b wb}%y/%m/%d %{=b wm}%c"
+
+# 似たようなものとして、hardstatusはscreenとは関係無いTTYの機能であるそうな
+# hardstatus alwayslastline "%{= gk}[%m/%d %02c:%s] %{gW} %-w%{= wk}%n %t%{-}%+w %=%{gk}$USER@$HOSTNAME[$LANG] (%l) "
+
+# ターミナル（？）よくわからないね
+# term xterm-256color
+
+# これがonだと自動でデタッチ（nohup戻ってこれちゃう系みたいな？）が可能
+# ^k-dで切ると、screen -rで復帰可能となる
+autodetach on
+
+# 可視ベルのメッセージの設定だそうだが、いまいちわからないので無視！
+# bell_msg "^G"
+
+# 現在のウィンドウに対して可視ベルの設定を行うそうだが、よくわからないので無視！
+# vbell off
+
+# これをoffにしないと、screen起動時に著作権の表示が出てウザい
+startup_message off
+
+# エンコード系でしょう
+defkanji utf-8
+defencoding utf-8
+encoding utf-8 utf-8
+
+#スクロールバックバッファ
+defscrollback 10000
+
+bind n screen
+bind h prev
+bind j next
+bind l windowlist
