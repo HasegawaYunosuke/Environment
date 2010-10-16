@@ -50,8 +50,8 @@ PROMPT="%{${fg[red]}%}+%{${fg[yellow]}%}+%{${fg[blue]}%}+\
 
 
 # +++ エイリアス +++
-# alias ls='ls -G'               # Mac
-alias ls='ls --color=auto'       # Linux
+alias ls='ls -G'               # Mac
+# alias ls='ls --color=auto'       # Linux
 alias ll='ls -l'
 alias la='ls -a'
 alias lla='ls -al'
