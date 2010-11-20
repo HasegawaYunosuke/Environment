@@ -43,6 +43,9 @@ setlocal omnifunc=syntaxcomplete#Complete   "omni補完を実行するための�
 "---.htmlファイルの時読み込む設定ファイル---"
 "if filereadable($HOME . '/.vim/after/ftplugin/html.vim')
 "    au Filetype html, source $HOME/.vim/after/ftplugin/html.vim
-"elseif filereadable($HOME . '/.vim/after/ftplugin/Makefile.vim')
-"    au Filetype Makefile, source $HOME/.vim/after/ftplugin/Makefile.vim
 "endif
+
+"---Makefileの時読み込む設定ファイル---"
+if filereadable($HOME . '/.vim/after/ftplugin/Makefile.vim')
+    au BufRead Makefile, source $HOME/.vim/after/ftplugin/Makefile.vim
+endif
