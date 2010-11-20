@@ -40,7 +40,6 @@ encoding utf-8 utf-8
 #スクロールバックバッファ
 defscrollback 10000
 
-bind n screen
 bind h prev
 bind j next
 bind l windowlist
